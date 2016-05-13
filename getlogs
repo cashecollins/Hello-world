@@ -1,0 +1,42 @@
+#!/bin/sh
+
+mkdir $1
+
+#Zone1
+ssh root@192.168.0.140 '
+logcat
+' | tee ~/Desktop/$1/Zone1.log
+
+clear
+
+#Zone2
+ssh root@192.168.0.144 '
+logcat
+' | tee ~/Desktop/$1/Zone2.log
+
+clear
+
+#Zone3
+ssh root@192.168.0.136 '
+logcat
+' | tee ~/Desktop/$1/Zone3.log
+
+clear
+
+#Zone4
+ssh root@192.168.0.146 '
+logcat
+' | tee ~/Desktop/$1/Zone4.log
+
+clear
+
+#Zone5
+ssh root@192.168.0.147 '
+logcat
+' | tee ~/Desktop/$1/Zone5.log
+
+clear
+
+
+
+
